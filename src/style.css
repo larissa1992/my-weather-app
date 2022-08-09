@@ -163,12 +163,14 @@ footer {
   position: relative;
   text-align: center;
   bottom: -60px;
-
-  color: #5f5454;
-  font-size: 22px;
-  font-family: "Dancing Script", cursive;
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 footer:hover {
   color: #1d1a1a;
   transition: 5ms inside ease-in-out;
+}
+.name {
+  font-family: cursive;
+  color: black;
 }
