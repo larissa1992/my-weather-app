@@ -1,0 +1,174 @@
+#timelapse {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+.bg-container {
+  width: 100%;
+  height: 100%;
+  padding-left: 40px;
+  padding-right: 50px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  line-height: 30px;
+  font-weight: 500;
+}
+
+.title {
+  position: relative;
+  margin-top: -10px;
+  text-align: center;
+  color: black;
+}
+.search-input {
+  position: relative;
+  top: 10px;
+  background-color: rgb(208, 193, 194, 0.2) !important;
+}
+.search-input:hover {
+  background-color: transparent !important;
+}
+.search-input::placeholder {
+  color: #373636;
+  opacity: 1;
+}
+.search-button {
+  position: relative;
+  top: 10px;
+}
+.current-position {
+  position: relative;
+  top: 10px;
+}
+.city-country {
+  position: relative;
+  left: -39px;
+}
+.city {
+  position: relative;
+  padding-top: 20px;
+  padding-left: 0px;
+  text-align: center;
+  font-weight: 540;
+  font-size: 36px;
+  color: black;
+  text-transform: capitalize;
+}
+#country-name {
+  position: relative;
+  font-weight: 540;
+  font-size: 36px;
+  top: -29px;
+  left: 376px;
+  color: black;
+}
+.date {
+  text-align: center;
+  font-size: 25px;
+  color: black;
+  position: relative;
+  bottom: -7px;
+}
+
+.content {
+  position: relative;
+  display: inline-flex;
+  text-align: center;
+  margin-left: 133px;
+  margin-top: 30px;
+}
+.temperature {
+  text-align: center;
+  font-size: 50px;
+  color: black;
+}
+.units {
+  font-size: 15px;
+  position: relative;
+  top: -20px;
+  left: 5px;
+}
+#celcius-link,
+#fahrenheit-link {
+  text-decoration: none;
+  color: rgb(54, 52, 52);
+}
+
+.detail {
+  position: relative;
+  font-size: larger;
+  margin-left: 40px;
+  margin-top: 0px;
+}
+ul {
+  list-style: none;
+  color: black;
+}
+#cloudy-img {
+  width: 70px;
+  position: relative;
+  top: -15px;
+  left: 20px;
+}
+#description {
+  font-size: 20px;
+  color: black;
+  position: relative;
+  left: 30px;
+  top: -15px;
+  text-transform: capitalize;
+}
+
+.emoji-sun {
+  color: rgb(240, 240, 102);
+  font-size: 26px;
+}
+.emoji-rain {
+  color: rgb(117, 238, 238);
+  font-size: 26px;
+}
+.emoji-cloud {
+  font-size: 26px;
+  color: rgb(169, 205, 236);
+}
+.emoji-storm {
+  font-size: 26px;
+  color: rgb(84, 197, 217);
+}
+.fa-cloud-rain,
+.fa-droplet,
+.fa-wind {
+  color: rgb(60, 46, 46);
+}
+
+.week-tabel {
+  position: relative;
+}
+.week-days button {
+  text-decoration: none;
+  border: none;
+  background-color: rgb(189, 161, 153, 0.25);
+  border-radius: 20px;
+  color: black;
+}
+
+.week-days button:hover {
+  background-color: rgba(255, 255, 255);
+  border-radius: 1rem;
+  color: grey;
+  transition: 0.9s ease;
+}
+footer {
+  position: relative;
+  text-align: center;
+  bottom: -60px;
+
+  color: #5f5454;
+  font-size: 22px;
+  font-family: "Dancing Script", cursive;
+}
+footer:hover {
+  color: #1d1a1a;
+  transition: 5ms inside ease-in-out;
+}
