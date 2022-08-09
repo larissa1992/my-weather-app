@@ -170,7 +170,16 @@ footer:hover {
   color: #1d1a1a;
   transition: 5ms inside ease-in-out;
 }
-.name {
-  font-family: cursive;
+
+.link {
   color: black;
+  text-decoration: none;
+}
+.link:hover {
+  background-color: rgb(242, 232, 232);
+  border-radius: 1rem;
+  color: black;
+  transition: 0.9s ease;
+  padding: 10px;
+  cursor: pointer;
 }
