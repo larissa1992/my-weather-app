@@ -118,7 +118,7 @@ function displayTemp(response) {
     response.data.main.temp
   );
 
-  cityName = document.querySelector("h2").innerHTML = response.data.name;
+  cityName = document.querySelector("#city").innerHTML = response.data.name;
 
   countryName = document.querySelector("#country-name").innerHTML =
     response.data.sys.country;
