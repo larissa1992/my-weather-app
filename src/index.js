@@ -41,8 +41,8 @@ let currentMonth = months[now.getMonth()];
 
 let currentDate = `${currentDay} ${date} ${currentMonth} ${hours}:${minutes}`;
 console.log(currentDate);
-let h3 = document.querySelector("h3");
-h3.innerHTML = currentDate;
+let h2 = document.querySelector("h2");
+h2.innerHTML = currentDate;
 
 // Search engine display city and its weather conditions
 
@@ -64,7 +64,7 @@ function displayWeatherConditions(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
-  document.querySelector("#country-name").innerHTML = response.data.sys.country;
+  document.querySelector("#country").innerHTML = response.data.sys.country;
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
@@ -80,21 +80,27 @@ searchCity("New York");
 
 // Degrees Selectors
 
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round((19 * 9) / 5 + 32);
-}
-function convertToCelcius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 19;
-}
+// function convertToFahrenheit(event) {
+//   event.preventDefault();
+//   document.querySelector("#temperature").innerHTML = Math.round(
+//     response.data.main.temp
+//   );
+//   let temperatureElementFahrenheit =
+//     document.querySelector("#temperature").value;
+//   temperatureElementFahrenheit = Math.round(
+//     ("#temperature".value * 9) / 5 + 32
+//   );
+// }
+// function converttoCelcius(event) {
+//   event.preventDefault();
+//   let temperatureElementCelcius = document.querySelector("#temperature");
+//   temperatureElementCelcius = "#temperature".value;
+// }
 
-let celciusLink = document.querySelector("#celcius-link");
-celciusLink.addEventListener("click", convertToCelcius);
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
+// let celciusLink = document.querySelector("#celcius-link");
+// celciusLink.addEventListener("click", converttoCelcius);
+// let fahrenheitLink = document.querySelector("#fahrenheit-link");
+// fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
 // Current postion coordinates
 
@@ -120,7 +126,7 @@ function displayTemp(response) {
 
   cityName = document.querySelector("#city").innerHTML = response.data.name;
 
-  countryName = document.querySelector("#country-name").innerHTML =
+  countryName = document.querySelector("#country").innerHTML =
     response.data.sys.country;
 
   description = document.querySelector("#description").innerHTML =
@@ -138,7 +144,7 @@ function getTemp(response) {
   temp.innerHTML = Math.round(response.data.main.temp);
 
   let countryName = response.data.sys.country;
-  countryName = document.querySelector("#country-name");
+  countryName = document.querySelector("#country");
   countryName.innerHTML = response.data.sys.country;
 
   let description = response.data.weather.description;
