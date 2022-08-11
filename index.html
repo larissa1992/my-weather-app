@@ -45,28 +45,30 @@
                     </div>
                 </div>
             </form>
-
-
+            <div class="city-country">
+                <span id="city" class="city"></span> <span class="country" id="country"></span>
+            </div>
             <div class="row">
                 <div class="col-6">
-                    <div class="city-country">
-                        <span id="city" class="city"></span><span class="country" id="country"></span>
+                    <div class="clear-fix weather-temperature">
+                        <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" id="cloudy-img"
+                            alt="Partly Cloudy" class="float-left" />
+                        <span id="description"></span>
+
+                        <strong class="temperature" id="temperature"> </strong><span class="units">
+                            <a href="#" id="celcius-link">°C|</a>
+                            <a href="#" id="fahrenheit-link">°F</a>
+                        </span>
                     </div>
                     <h2 class="date"></h2>
 
-                    <div class="weather-temperature">
-                        <span class="temperature" id="temperature"></span>
-                        <span class="units"> <a href="#" id="celcius-link">°C|</a> <a href="#"
-                                id="fahrenheit-link">°F</a></span>
-                        <span> <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" id="cloudy-img"
-                                alt="Partly Cloudy"> </span>
-                        <span id="description"></span>
 
-                    </div>
                 </div>
+
                 </br>
                 <div class="col-6">
                     <ul class="weather-condition">
+
                         <li> <span><i class="fa-solid fa-droplet"></i>
                                 Humidity:</span> <span id="humidity"></span> %
                         </li>
@@ -75,8 +77,8 @@
                         </li>
                     </ul>
                 </div>
-
             </div>
+
 
             <div class="row week-tabel mt-5">
                 <div class="col week-days">
@@ -126,17 +128,20 @@
 
 
             </div>
-            <footer> <a class="link" href="https://github.com/larissa1992/my-weather-app" target="_blank">Open source
+            <footer> <a class="link" href="https://github.com/larissa1992/my-weather-app" target="_blank">Open
+                    source
                     code
                     by Larissa</a>
             </footer>
+
+
+
         </div>
+
+
+        <script src="src/index.js"> </script>
     </div>
-
-
-    <script src="src/index.js"> </script>
-
-
+    </div>
 </body>
 
 </html>
