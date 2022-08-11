@@ -49,6 +49,9 @@
   position: relative;
   top: 10px;
 }
+.overview {
+  margin-top: -33px;
+}
 .city-country {
   font-weight: 540;
   font-size: 36px;
@@ -56,14 +59,15 @@
   padding: 20px;
   margin-left: -20px;
 }
-#cloudy-img {
-  width: 70px;
+.weather-temperature {
+  margin-left: -14px;
+  margin-top: -26px;
 }
 .weather-temperature strong {
   font-size: 55px;
   font-weight: lighter;
   position: relative;
-  top: 14px;
+  top: 10px;
   left: 12px;
 }
 .units {
@@ -77,19 +81,22 @@
   text-decoration: none;
 }
 
-.date {
-  position: relative;
-  font-size: 23px;
-  bottom: -20px;
-}
 #description {
-  font-size: 26px;
+  font-size: 20px;
   text-transform: capitalize;
   position: relative;
-  bottom: -4px;
+  bottom: 8px;
 }
 
+.date {
+  position: relative;
+  font-size: 20px;
+  bottom: 2px;
+}
 .weather-condition {
+  position: relative;
+  bottom: -78px;
+  left: -90px;
   list-style: none;
   font-size: 20px;
   color: black;

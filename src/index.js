@@ -59,6 +59,11 @@ function handleSubmit(event) {
   searchCity(city);
 }
 
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+searchCity("New York");
+
 function displayWeatherConditions(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -71,12 +76,16 @@ function displayWeatherConditions(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    ` http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute(
+    "alt",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png)`
+  );
 }
-
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", handleSubmit);
-
-searchCity("New York");
 
 // Degrees Selectors
 
