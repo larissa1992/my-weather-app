@@ -56,8 +56,8 @@
   padding: 20px;
   margin-left: -20px;
 }
-.date {
-  font-size: 20px;
+#cloudy-img {
+  width: 70px;
 }
 .weather-temperature strong {
   font-size: 55px;
@@ -77,19 +77,22 @@
   text-decoration: none;
 }
 
-.weather-condition {
-  list-style: none;
-  font-size: 20px;
-  color: black;
-}
-#cloudy-img {
-  width: 70px;
+.date {
+  position: relative;
+  font-size: 23px;
+  bottom: -20px;
 }
 #description {
   font-size: 26px;
   text-transform: capitalize;
   position: relative;
   bottom: -4px;
+}
+
+.weather-condition {
+  list-style: none;
+  font-size: 20px;
+  color: black;
 }
 
 .emoji-sun {
