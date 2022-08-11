@@ -112,6 +112,25 @@
   color: rgba(67, 65, 65, 0.8);
 }
 
+.week-tabel {
+  position: relative;
+  margin-top: 100px;
+}
+.week-days button {
+  text-decoration: none;
+  border: none;
+  background-color: rgba(183, 163, 157, 0.337);
+  border-radius: 20px;
+  color: black;
+}
+
+.week-days button:hover {
+  background-color: rgba(255, 255, 255);
+  border-radius: 1rem;
+  color: grey;
+  transition: 0.9s ease;
+}
+
 .emoji-sun {
   color: rgb(240, 240, 102);
   font-size: 26px;
@@ -134,24 +153,6 @@
   color: rgb(60, 46, 46);
 }
 
-.week-tabel {
-  position: relative;
-  margin-top: 100px;
-}
-.week-days button {
-  text-decoration: none;
-  border: none;
-  background-color: rgb(189, 161, 153, 0.25);
-  border-radius: 20px;
-  color: black;
-}
-
-.week-days button:hover {
-  background-color: rgba(255, 255, 255);
-  border-radius: 1rem;
-  color: grey;
-  transition: 0.9s ease;
-}
 footer {
   position: relative;
   text-align: center;
