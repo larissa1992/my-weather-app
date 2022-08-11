@@ -50,7 +50,8 @@
   top: 10px;
 }
 .overview {
-  margin-top: -33px;
+  margin-top: 11px;
+  margin-bottom: -91px;
 }
 .city-country {
   font-weight: 540;
@@ -60,22 +61,23 @@
   margin-left: -20px;
 }
 .weather-temperature {
-  margin-left: -14px;
-  margin-top: -26px;
+  margin-left: -44px;
+  margin-top: -74px;
 }
 .weather-temperature strong {
   font-size: 55px;
   font-weight: lighter;
   position: relative;
   top: 10px;
-  left: 12px;
+  left: -11px;
 }
 .units {
-  font-size: 15px;
   position: relative;
-  top: -10px;
-  left: 12px;
+  font-size: 19px;
+  top: -15px;
+  left: -6px;
 }
+
 #celsius-link,
 #fahrenheit-link {
   text-decoration: none;
@@ -88,24 +90,26 @@
   text-decoration: none;
 }
 #description {
-  font-size: 20px;
-  text-transform: capitalize;
   position: relative;
-  bottom: 8px;
+  text-transform: capitalize;
+  font-size: 21px;
+  bottom: 12px;
+  color: rgba(67, 65, 65, 0.8);
 }
 
 .date {
   position: relative;
   font-size: 20px;
-  bottom: 2px;
+  bottom: 5px;
+  color: rgba(67, 65, 65, 0.8);
 }
 .weather-condition {
   position: relative;
-  bottom: -78px;
-  left: -90px;
+  bottom: 14px;
+  left: -47px;
   list-style: none;
-  font-size: 20px;
-  color: black;
+  font-size: 18px;
+  color: rgba(67, 65, 65, 0.8);
 }
 
 .emoji-sun {
@@ -132,6 +136,7 @@
 
 .week-tabel {
   position: relative;
+  margin-top: 100px;
 }
 .week-days button {
   text-decoration: none;
