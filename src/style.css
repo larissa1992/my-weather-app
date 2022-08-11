@@ -76,11 +76,17 @@
   top: -10px;
   left: 12px;
 }
-#celcius-link,
+#celsius-link,
 #fahrenheit-link {
   text-decoration: none;
 }
-
+.weather-temperature .active {
+  color: black;
+  cursor: default;
+}
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
 #description {
   font-size: 20px;
   text-transform: capitalize;
