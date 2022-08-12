@@ -89,7 +89,7 @@
 .weather-temperature .active:hover {
   text-decoration: none;
 }
-#description {
+.weather-description {
   position: relative;
   text-transform: capitalize;
   font-size: 21px;
@@ -112,7 +112,7 @@
   color: rgba(67, 65, 65, 0.8);
 }
 
-.week-tabel {
+.week-forecast {
   position: relative;
   margin-top: 100px;
 }
