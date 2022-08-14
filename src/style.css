@@ -47,10 +47,11 @@
 }
 .current-position {
   position: relative;
-  top: 10px;
+  top: -2px;
+  font-size: 40px;
 }
 .overview {
-  margin-top: 11px;
+  margin-top: -36px;
   margin-bottom: -91px;
 }
 .city-country {
@@ -60,9 +61,15 @@
   padding: 20px;
   margin-left: -20px;
 }
+
+.icon {
+  position: relative;
+  left: 10px;
+  bottom: -15px;
+}
 .weather-temperature {
   margin-left: -44px;
-  margin-top: -74px;
+  margin-top: -91px;
 }
 .weather-temperature strong {
   font-size: 55px;
@@ -92,7 +99,7 @@
 .weather-description {
   position: relative;
   text-transform: capitalize;
-  font-size: 21px;
+  font-size: 20px;
   bottom: 12px;
   color: rgba(67, 65, 65, 0.8);
 }
@@ -105,8 +112,8 @@
 }
 .weather-condition {
   position: relative;
-  bottom: 14px;
-  left: -47px;
+  bottom: 36px;
+  left: 93px;
   list-style: none;
   font-size: 18px;
   color: rgba(67, 65, 65, 0.8);
@@ -135,23 +142,6 @@
   color: rgb(240, 240, 102);
   font-size: 26px;
 }
-.emoji-rain {
-  color: rgb(117, 238, 238);
-  font-size: 26px;
-}
-.emoji-cloud {
-  font-size: 26px;
-  color: rgb(169, 205, 236);
-}
-.emoji-storm {
-  font-size: 26px;
-  color: rgb(84, 197, 217);
-}
-.fa-cloud-rain,
-.fa-droplet,
-.fa-wind {
-  color: rgb(60, 46, 46);
-}
 
 footer {
   position: relative;
@@ -172,8 +162,9 @@ footer:hover {
 .link:hover {
   background-color: rgb(242, 232, 232);
   border-radius: 1rem;
-  color: black;
+  color: blue;
   transition: 0.9s ease;
   padding: 10px;
   cursor: pointer;
+  text-decoration: underline;
 }
