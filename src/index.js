@@ -170,3 +170,26 @@ function getTemp(response) {
   wind = document.querySelector("#wind");
   wind.innerHTML = response.data.wind.speed;
 }
+
+function forecast() {
+  let forecast = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row"> `;
+  let days = ["Fri", "Sat", "Sun", "Mon", "Tue", "Wed", "Thu"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+                    <div class="col week-days">
+                        <button>${day}
+                            <div class="emoji-sun"> <i class="fa-solid fa-sun sunweek"></i></div>
+                            <div class="max">22°
+                                <span class="min">18°</span>
+                            </div>
+                        </button>
+                    </div> `;
+  });
+  forecastHTML = forecastHTML + ` </div>`;
+  forecast.innerHTML = forecastHTML;
+}
+
+forecast(day);
