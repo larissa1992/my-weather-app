@@ -20,7 +20,6 @@ let days = [
   "Thursday",
   "Friday",
   "Saturday",
-  "Sunday",
 ];
 let currentDay = days[now.getDay()];
 let month = now.getMonth();
@@ -44,6 +43,12 @@ console.log(currentDate);
 let h2 = document.querySelector("h2");
 h2.innerHTML = currentDate;
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
+}
 // Search engine display city and its weather conditions
 
 function searchCity(city) {
@@ -90,8 +95,7 @@ function displayWeatherConditions(response) {
     "alt",
     `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png)`
   );
-
-  console.log(response.data);
+  getForecast(response.data.coord);
 }
 
 // Degrees Selectors
@@ -156,26 +160,35 @@ function displayTemp(response) {
 
   wind = document.querySelector("#wind").innerHTML = response.data.wind.speed;
 }
-
-function forecast() {
-  let forecast = document.querySelector("#forecast");
-  let forecastHTML = `<div class="row"> `;
-  let days = ["Fri", "Sat", "Sun", "Mon", "Tue", "Wed", "Thu"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
-                    <div class="col week-days">
-                        <button>${day}
-                            <div class="emoji-sun"> <i class="fa-solid fa-sun sunweek"></i></div>
-                            <div class="max">22°
-                                <span class="min">18°</span>
-                            </div>
-                        </button>
-                    </div> `;
-  });
-  forecastHTML = forecastHTML + ` </div>`;
-  forecast.innerHTML = forecastHTML;
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
-forecast(day);
+function displayForecast(response) {
+  let forecast = response.data.daily;
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row"> `;
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 7) {
+      forecastHTML =
+        forecastHTML +
+        `
+          <div class="col week-days">
+              <button>${formatDay(forecastDay.dt)}   
+            <div> <img src="http://openweathermap.org/img/wn/${
+              forecastDay.weather[0].icon
+            }@2x.png" alt="" width="42" </div> 
+             <div class="max">22°
+            <span class="min">18°</span>
+            </div>
+            </button>
+             </div> `;
+    }
+  });
+  forecastHTML = forecastHTML + ` </div>`;
+  forecastElement.innerHTML = forecastHTML;
+}

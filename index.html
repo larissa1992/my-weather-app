@@ -32,7 +32,7 @@
                     <div class="col-6">
                         <input type="text" id="search-city-input"
                             class="btn btn-outline-light btn-lg w-100 shadow-sm search-input"
-                            placeholder="What's the weather in" autocomplete="off" autofocus>
+                            placeholder="What's the weather in..." autocomplete="off" autofocus>
                     </div>
                     <div class="col">
                         <input type="submit" id="search-button"
@@ -61,19 +61,24 @@
                     <div class="col-6">
                         <div class="clear-fix weather-temperature">
                             <img src="#" id="icon" alt="" class="float-left icon" width="140" />
-                            <strong class="temperature" id="temperature"> </strong><span class="units">
+                            <strong class="temperature" id="temperature"> </strong>
+                            <span class="units">
                                 <a href="#" id="celsius-link" class="active">°C|</a>
                                 <a href="#" id="fahrenheit-link">°F</a>
                             </span>
 
                         </div>
                         <div class="weather-condition">
-                            <div class="feelsLike"> Feels like: <span id="feelsLike"></span>°Celsisus</div>
-                            <span><i class="fa-solid fa-droplet"></i>
-                                Humidity:</span> <span id="humidity"></span> %
-                            <span> &nbsp<i class="fa-solid fa-wind"></i>
-                                Wind:</span> <span id="wind"></span> km/s
-
+                            <button class="wrap-up">
+                                <div class="inner-text"> Feels like: <span id="feelsLike"></span>°</div>
+                            </button>
+                            <button class="wrap-up">
+                                <div class="inner-text"> Humidity: <span id="humidity"> </span>% </div>
+                            </button>
+                            <button class="wrap-up">
+                                <div class="inner-text">
+                                    Wind: <span id="wind"></span> km/s</div>
+                            </button>
                         </div>
                     </div>
                 </div>
