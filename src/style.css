@@ -69,7 +69,7 @@
 }
 .weather-temperature {
   margin-left: -44px;
-  margin-top: -91px;
+  margin-top: -107px;
 }
 .weather-temperature strong {
   font-size: 55px;
@@ -127,7 +127,7 @@ a:hover {
 .wrap-up {
   position: relative;
   height: 40px;
-  width: 129px;
+  width: 115px;
   background-color: #4f5255, 80%;
   border-radius: 53px;
   border: none;
