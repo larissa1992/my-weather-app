@@ -78,6 +78,13 @@
   top: 34px;
   left: -4px;
 }
+a {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  color: black;
+}
 .units {
   position: relative;
   font-size: 19px;
@@ -159,10 +166,7 @@ footer {
   color: black;
   text-decoration: none;
 }
-a {
-  color: black;
-  text-decoration: none;
-}
+
 .gitHub:hover,
 .linkedin:hover {
   background-color: rgb(89, 86, 86);
