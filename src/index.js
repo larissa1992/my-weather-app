@@ -62,7 +62,7 @@ function handleSubmit(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-searchCity("New York");
+searchCity("Copenhagen");
 
 function displayWeatherConditions(response) {
   document.querySelector("#city").innerHTML = response.data.name;
@@ -70,6 +70,10 @@ function displayWeatherConditions(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
+  document.querySelector("#feelsLike").innerHTML = Math.round(
+    response.data.main.feels_like
+  );
+
   document.querySelector("#country").innerHTML = response.data.sys.country;
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
@@ -86,6 +90,8 @@ function displayWeatherConditions(response) {
     "alt",
     `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png)`
   );
+
+  console.log(response.data);
 }
 
 // Degrees Selectors
@@ -134,7 +140,9 @@ function displayTemp(response) {
   temp = document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
-
+  document.querySelector("#feelsLike").innerHTML = Math.round(
+    response.data.main.feels_like
+  );
   cityName = document.querySelector("#city").innerHTML = response.data.name;
 
   countryName = document.querySelector("#country").innerHTML =
@@ -147,28 +155,6 @@ function displayTemp(response) {
     response.data.main.humidity;
 
   wind = document.querySelector("#wind").innerHTML = response.data.wind.speed;
-}
-
-function getTemp(response) {
-  let temp = Math.round(response.data.main.temp);
-  temp = document.querySelector("#temperature");
-  temp.innerHTML = Math.round(response.data.main.temp);
-
-  let countryName = response.data.sys.country;
-  countryName = document.querySelector("#country");
-  countryName.innerHTML = response.data.sys.country;
-
-  let description = response.data.weather.description;
-  description = document.querySelector("#description");
-  description.innerHTML = response.data.weather[0].description;
-
-  let humidity = response.data.main.humidity;
-  humidity = document.querySelector("#humidity");
-  humidity.innerHTML = response.data.main.humidity;
-
-  let wind = response.data.wind.speed;
-  wind = document.querySelector("#wind");
-  wind.innerHTML = response.data.wind.speed;
 }
 
 function forecast() {
