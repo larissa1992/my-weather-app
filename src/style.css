@@ -6,10 +6,11 @@
   min-height: 100%;
 }
 .container {
+  display: flex;
+  justify-content: center;
   max-width: 1000%;
-  max-height: 1000%;
-  padding-left: 40px;
-  padding-right: 50px;
+  /* padding-left: 40px;
+  padding-right: 50px; */
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   line-height: 30px;
   font-weight: 500;
@@ -127,10 +128,11 @@ a:hover {
 .wrap-up {
   position: relative;
   height: 40px;
-  width: 115px;
+  width: 125px;
   background-color: #4f5255, 80%;
   border-radius: 53px;
-  border: none;
+  border: 1px solid rgb(228, 220, 220);
+  box-shadow: 10px 10px 10px rgba(69, 66, 66, 0.5);
 }
 
 .inner-text {
@@ -156,11 +158,12 @@ a:hover {
   color: white;
   transition: 0.9s ease;
 }
-
+.footnote {
+  display: flex;
+  justify-content: center;
+}
 footer {
   position: relative;
-  bottom: 13px;
-  left: 143px;
   font-size: 16px;
   font-family: Georgia, "Times New Roman", Times, serif;
   color: black;
